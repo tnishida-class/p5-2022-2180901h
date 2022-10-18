@@ -6,13 +6,16 @@ let size;
 function setup(){
   createCanvas(200, 200);
   count = 0;
-  cycle = 5;
-  size = 0 
+  cycle = 7;
+  size = 0;
+  //frameRate(10)
+  
 }
 
 function draw(){
   background(160, 192, 255);
   count = (count + 1) % cycle;
+  console.log(count);
   // BLANK[1]
   size += 3*count;
   if(size < 0,size > width){size = -1*size}
