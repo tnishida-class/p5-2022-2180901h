@@ -8,9 +8,9 @@ function windowResized(){
 }
 
 function draw(){
-  background(160, 192, 255);
-  for(let i = 0; i < 10; i++){
-    ellipse(width * i / 10, height * (10 - i) / 10, 20);
+  background(0, 192, 255);
+  for(let i = 0; i < 15; i++){
+    ellipse(width * i / 15, height * (15 - i) / 15, 40);
   }
   text("center!", width * 0.5, height * 0.5);
 }
