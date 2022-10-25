@@ -44,11 +44,12 @@ function setup(){
     const dx = width / scores.length;
     const h = height * scores[i] / 100;
     // BLANK[4] ヒント: 条件分岐を使ってif色を変更します
-    fill(128);
+    fill(0);
     rect(i * dx, height - h, dx - 4, h);
-    text(scores[i].toPrecision(3), i * dx, height - h);
+    text(scores[i].toPrecision(3), i * dx, height - h,);
      if(scores[i] <= smallest){fill(0, 0, 255); rect(i * dx, height - h, dx - 4, h)}
      if(scores[i] >= largest){fill(255, 0, 0); rect(i * dx, height - h, dx - 4, h)}
+     else if(scores[i] > smallest && scores[i] < largest){fill(128); rect(i * dx, height - h, dx - 4, h)}
      
   }
   // BLANK[5] 平均点の線を引きます
