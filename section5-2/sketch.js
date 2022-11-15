@@ -49,4 +49,4 @@ function regularPolygon(n, cx, cy, r){
   pop();
 }
 
-//ｎの定義　var?  
+//ｎの定義　var? 
