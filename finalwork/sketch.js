@@ -19,7 +19,7 @@ function draw(){
   
   for(let i = 0; i < 6; i++){
     let theta = TWO_PI * i / 6 + 1/6*PI;
-    let x = windowWidth/2 + cos(theta) * 100; 
+    let x = windowWidth/2 + cos(theta) * 100;
     let y = windowHeight/2 + sin(theta) * 100; 
     sarami(x, y, 70);
 
