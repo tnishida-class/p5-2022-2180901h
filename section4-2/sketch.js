@@ -6,14 +6,14 @@ let balls;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-  balls = [];
+  balls = []; //配列ballsの中にオブジェクトの設定をマトリョーシカみたいにまとめられる
 }
 
 function draw(){
   background(160, 192, 255);
   for(let i = 0; i < balls.length; i++){
-    let b = balls[i];
-    ellipse(b.x, b.y, b.size);
+    let b = balls[i];          //ballsの中のi番目のオブジェクト設定のセットをｂとする
+    ellipse(b.x, b.y, b.size); //bのxを参照,ｂのyを参照…
     b.x += b.vx;
     b.y += b.vy;
   }
@@ -23,8 +23,8 @@ function mouseDragged(){
   const dx = mouseX - pmouseX;
   const dy = mouseY - pmouseY;
   if(mag(dx, dy) > 5){
-    const b = { x: mouseX, y: mouseY, size: 20, vx: dx, vy: dy };
-    balls.push(b);
+    const b = { x: mouseX, y: mouseY, size: random(20, 100), vx: dx, vy: dy }; //bの設定セットを指定→マウスのべくトルで決まる
+    balls.push(b); //配列ballsにbのセットを追加
   }
 }
 
